@@ -1769,6 +1769,9 @@ ul {
 .footer-left__phone {
   margin-bottom: 5px;
 }
+.footer-left__copyright_mob {
+  display: none;
+}
 .footer-right {
   padding: 80px 0 50px;
   max-width: 900px;
