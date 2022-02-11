@@ -16,7 +16,17 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./modules/slider.js\");\n\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./modules/slider.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n\n\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n;(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('overlay', 'header-top__button', 'modal__close')\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./modules/modal.js":
+/*!**************************!*\
+  !*** ./modules/modal.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst modal = (overlay, modalOpen, modalClose) => {\n    const modal = document.querySelector(`.${overlay}`)\n    const openBtn = document.querySelector(`.${modalOpen}`)\n    const closeBtn = document.querySelector(`.${modalClose}`)\n\n    openBtn.addEventListener('click', () => {\n        modal.style.display = 'flex'\n    })\n\n    closeBtn.addEventListener('click', () => {\n        modal.style.display = 'none'\n    })\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);\n\n//# sourceURL=webpack:///./modules/modal.js?");
 
 /***/ }),
 
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../node_modules/swiper/swiper.esm.js */ \"../node_modules/swiper/swiper.esm.js\");\n\n\n_node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Swiper.use([_node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Navigation, _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Pagination, _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Scrollbar, _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.EffectCoverflow]);\n\n\nconst slider = () => {\n    const swiper = new _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Swiper('.partners__inner', {\n        loop: true,\n        slidesPerView: 4,\n        spaceBetween: 50,\n        navigation: {\n            nextEl: '.partners-btn_next',\n            prevEl: '.partners-btn_prev',\n        },\n    });\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n\n\n//# sourceURL=webpack:///./modules/slider.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../node_modules/swiper/swiper.esm.js */ \"../node_modules/swiper/swiper.esm.js\");\n\n\n_node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Swiper.use([_node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Navigation, _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Pagination, _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Scrollbar, _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.EffectCoverflow]);\n\n\nconst slider = () => {\n    const swiper = new _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Swiper('.partners__inner', {\n        loop: true,\n        slidesPerView: 2,\n        allowTouchMove: false,\n        navigation: {\n            nextEl: '.partners-btn_next',\n            prevEl: '.partners-btn_prev',\n        },\n        breakpoints: {\n            1022: {\n                slidesPerView: 4,\n                spaceBetween: 50,\n            },\n            798: {\n                slidesPerView: 3,\n                spaceBetween: 30,\n            },\n            606: {\n                slidesPerView: 2,\n                spaceBetween: 40,\n            },\n            320: {\n                spaceBetween: 15,\n                slidesPerView: 2,\n            }\n        }\n    });\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n\n\n//# sourceURL=webpack:///./modules/slider.js?");
 
 /***/ }),
 

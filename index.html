@@ -8,363 +8,432 @@
     <script src="./script/main.js" defer></script>
 </head>
 <body>
-<header class="header-top">
-    <div class="container">
-        <div class="header-top__inner">
-            <a href="#" class="header-top__address">
-                <img src="./img/icons/place.svg" alt="mark">
-                ул. Трефолева 4/1
-            </a>
-            <div class="header-top__contacts">
-                <a href="tel:+79119001300" class="header-top__phone">
-                    <img src="./img/icons/call.svg" alt="call">
-                    +7 (911) 900 13-00
+<div class="main-container">
+    <header class="header-top">
+        <div class="container">
+            <div class="header-top__inner">
+                <a href="#" class="header-top__address">
+                    <img src="./img/icons/place.svg" alt="mark">
+                    <address>ул. Трефолева 4/1</address>
                 </a>
-                <button class="header-top__button">
-                    Заказать звонок
-                </button>
-            </div>
-        </div>
-    </div>
-</header>
-<header class="header">
-    <div class="container">
-        <div class="header__inner">
-            <nav class="header-nav">
-                <ul class="header-nav__list">
-                    <li><a href="#" class="header-nav__link">Доставка</a></li>
-                    <li><a href="#" class="header-nav__link">Оплата</a></li>
-                    <li><a href="#" class="header-nav__link">Гарантии</a></li>
-                    <li><a href="#" class="header-nav__link">Контакты</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="logo">
-                <img src="./img/icons/logo.svg" alt="logo">
-            </a>
-            <ul class="header-links">
-                <li>
-                    <a href="#" class="header-links__item">
-                        <img src="./img/icons/box.svg" alt="box">
-                        Заказы
+                <div class="header-top__contacts">
+                    <a href="tel:+79119001300" class="header-top__phone">
+                        <img src="./img/icons/call.svg" alt="call">
+                        +7 (911) 900 13-00
                     </a>
-                </li>
-                <li>
-                    <a href="#" class="header-links__item">
-                        <img src="./img/icons/lk.svg" alt="lk">
-                        Войти
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="header-links__item">
-                        <img src="./img/icons/cart.svg" alt="cart">
-                        Корзина
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</header>
-<main class="main">
-    <section class="search">
-        <div class="container">
-            <div class="search__inner">
-                <h1 class="title title_h1 search__title">
-                    Автозапчасти в наличии в Санкт-Петербурге
-                </h1>
-                <div class="search__info">
-                    Легкий способ найти и заказать нужную<br> запчасть по номеру детали
-                </div>
-                <form action="#" class="search-form">
-                    <input placeholder="Введите артикул. Пример — 19374543" name="search" aria-label="" type="text" class="search-form__input">
-                    <button class="button search-form__button">
-                        <img src="./img/icons/search-w.svg" alt="search">
-                        Найти
+                    <button class="header-top__button">
+                        Заказать звонок
                     </button>
-                </form>
+                </div>
             </div>
         </div>
-    </section>
-    <section class="company-data">
+    </header>
+    <header class="header">
         <div class="container">
-            <div class="company-data__inner">
-                <div class="company-data__item">
-                    <div class="company-data__img">
-                        <img src="./img/icons/box_back.svg" alt="box">
+            <div class="header__inner">
+                <nav class="header-nav">
+                    <ul class="header-nav__list">
+                        <li><a href="#" class="header-nav__link">Доставка</a></li>
+                        <li><a href="#" class="header-nav__link">Оплата</a></li>
+                        <li><a href="#" class="header-nav__link">Гарантии</a></li>
+                        <li><a href="#" class="header-nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="logo">
+                    <img src="./img/icons/logo.svg" alt="logo">
+                </a>
+                <ul class="header-links">
+                    <li>
+                        <a href="#" class="header-links__item">
+                            <img src="./img/icons/box.svg" alt="box">
+                            Заказы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header-links__item">
+                            <img src="./img/icons/lk.svg" alt="lk">
+                            Войти
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header-links__item">
+                            <img src="./img/icons/cart.svg" alt="cart">
+                            Корзина
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-mob">
+                <button class="header-mob__burger">
+                    <img src="./img/icons/burger.svg" alt="burger">
+                </button>
+                <a href="" class="header-mob__logo">
+                    <img src="./img/icons/logo.svg" alt="logo">
+                </a>
+                <a href="#" class="header-mob__cart">
+                    <img src="./img/icons/cart.svg" alt="cart">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="search">
+            <div class="container">
+                <div class="search__inner">
+                    <h1 class="title title_h1 search__title">
+                        Автозапчасти в наличии в Санкт-Петербурге
+                    </h1>
+                    <div class="search__info">
+                        Легкий способ найти и заказать нужную<br> запчасть по номеру детали
                     </div>
-                    Бесплатный<br>
-                    возврат
+                    <form action="#" class="search-form">
+                        <input placeholder="Введите артикул. Пример — 19374543" name="search" aria-label="" type="text" class="search-form__input">
+                        <button class="button search-form__button">
+                            <img src="./img/icons/search-w.svg" alt="search">
+                            Найти
+                        </button>
+                    </form>
                 </div>
-                <div class="company-data__item">
-                    <div class="company-data__img">
-                        <img src="./img/icons/delivery_fast.svg" alt="delivery">
+            </div>
+        </section>
+        <section class="company-data">
+            <div class="container">
+                <div class="company-data__inner">
+                    <div class="company-data__item">
+                        <div class="company-data__img">
+                            <img src="./img/icons/box_back.svg" alt="box">
+                        </div>
+                        Бесплатный<br>
+                        возврат
                     </div>
-                    Курьерская доставка<br>
-                    по городу
-                </div>
-                <div class="company-data__item">
-                    <div class="company-data__img">
-                        <img src="./img/icons/star.svg" alt="star">
+                    <div class="company-data__item">
+                        <div class="company-data__img">
+                            <img src="./img/icons/delivery_fast.svg" alt="delivery">
+                        </div>
+                        Курьерская доставка<br>
+                        по городу
                     </div>
-                    Поставка напрямую<br>
-                    из Европы
-                </div>
+                    <div class="company-data__item">
+                        <div class="company-data__img">
+                            <img src="./img/icons/star.svg" alt="star">
+                        </div>
+                        Поставка напрямую<br>
+                        из Европы
+                    </div>
 
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="help">
-        <div class="container">
-            <div class="help__inner">
-                <div class="help__text">
-                    <h2 class="title title_h2 title_white help__title">Нужна помощь с подбором?</h2>
-                    <span class="help__data">
+        </section>
+        <section class="help">
+            <div class="container">
+                <div class="help__inner">
+                    <div class="help__text">
+                        <h2 class="title title_h2 title_white help__title">
+                            Нужна помощь<br>
+                            с подбором?
+                        </h2>
+                        <span class="help__data">
                         Доверьте поиск автозапчастей<br>
                         нашим специалистам
                     </span>
-                </div>
-                <div class="help-form">
-                    <input placeholder="Ваше имя*" name="name" aria-label="" type="text">
-                    <input placeholder="Номер телефона*" name="phone" aria-label="" type="text">
-                    <input placeholder="VIN автомобиля" name="vin" aria-label="" type="text">
-                    <div class="help-form__info">
-                        <button class="button help-form__button">Отправить</button>
-                        <span class="help-form__conf">
+                    </div>
+                    <form action="#" class="help-form">
+                        <input placeholder="Ваше имя*" name="name" aria-label="" type="text">
+                        <input placeholder="Номер телефона*" name="phone" aria-label="" type="text">
+                        <input placeholder="VIN автомобиля" name="vin" aria-label="" type="text">
+                        <div class="help-form__info">
+                            <button class="button help-form__button">Заказать звонок</button>
+                            <span class="help-form__conf">
                             Оставляя данные на нашем сайте, вы соглашаетесь<br>
                             с <a href="#" class="help-form__link">Политикой Конфиденциальности</a>
                         </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="help__inner help__inner_complete">
+                    <div class="help__text">
+                        <h2 class="title title_h2 title_white help__title">
+                            Нужна помощь<br>
+                            с подбором?
+                        </h2>
+                        <span class="help__data">
+                        Доверьте поиск автозапчастей<br>
+                        нашим специалистам
+                    </span>
+                    </div>
+                    <div class="help-answer">
+                        <h3 class="help-answer__title">
+                            Ваши данные успешно<br>
+                            отправлены!
+                        </h3>
+                        <span class="help-answer__text">
+                        Наши специалисты свяжутся с вами<br> в ближайшее время
+                    </span>
+                        <button class="button help-answer__button">Отправить еще раз</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="how-order">
-        <div class="container">
-            <h2 class="title title_h2 how-order__title">Как сделать заказ?</h2>
-            <div class="how-order__inner">
-                <div class="how-order__item">
-                    <div class="how-order__top">
-                        <div class="how-order__number">1</div>
-                    </div>
-                    <h3 class="how-order__subtitle">
-                        Поиск по артикулу
-                    </h3>
-                    <div class="how-order__text">
-                        Введите артикул нужной автозапчасти в поиске. Если вы не знаете номера, то наши специалисты помогут вам с подбором
-                    </div>
-                </div>
-                <div class="how-order__item">
-                    <div class="how-order__top">
-                        <div class="how-order__number">2</div>
-                    </div>
-                    <h3 class="how-order__subtitle">
-                        Выбор деталей
-                    </h3>
-                    <div class="how-order__text">
-                        Выберите наиболее подходящую деталь по цене, сроку доставки и производителю
-                    </div>
-                </div>
-                <div class="how-order__item">
-                    <div class="how-order__top">
-                        <div class="how-order__number">3</div>
-                    </div>
-                    <h3 class="how-order__subtitle">
-                        Оформление заказа
-                    </h3>
-                    <div class="how-order__text">
-                        Оформите заказ и закажите бесплатную курьерскую доставку домой или из пункта выдачи
-                    </div>
-                </div>
-                <div class="how-order__item">
-                    <div class="how-order__top">
-                        <div class="how-order__number">4</div>
-                    </div>
-                    <h3 class="how-order__subtitle">
-                        Подтверждение
-                    </h3>
-                    <div class="how-order__text">
-                        Наш менеджер свяжется с вами<br>
-                        для уточнения деталей и подтверждения заказа
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="partners">
-        <div class="container">
-            <div class="partners__top">
-                <h2 class="title title_h2">Наши партнеры</h2>
-                <div class="partners__buttons">
-                    <button class="partners-btn partners-btn_prev">
-                        <svg width="23" height="19" viewBox="0 0 23 19" fill="#D3D3D3" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M23 10.7326L4.78136 10.7326L11.3926 17.257L9.62643 19L-8.30516e-07 9.5L9.62643 1.06578e-06L11.3926 1.74296L4.78136 8.26736L23 8.26735L23 10.7326Z"/>
-                        </svg>
-                    </button>
-                    <button class="partners-btn partners-btn_next">
-                        <svg width="23" height="19" viewBox="0 0 23 19" fill="#D3D3D3" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M-1.18459e-06 10.7326L18.2186 10.7326L11.6074 17.257L13.3736 19L23 9.5L13.3736 1.06578e-06L11.6074 1.74296L18.2186 8.26736L-9.69071e-07 8.26735L-1.18459e-06 10.7326Z"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="partners__inner">
-                <div class="swiper-wrapper">
-                    <div class="partners-item swiper-slide">
-                        <h3 class="partners-item__title">НАЗВАНИЕ</h3>
-                        <div class="partners-item__text">
-                            Крупнейший поставщик автозапчастей на Северо-Западе
+        </section>
+        <section class="how-order">
+            <div class="container">
+                <h2 class="title title_h2 how-order__title">Как сделать заказ?</h2>
+                <div class="how-order__inner">
+                    <div class="how-order__item">
+                        <div class="how-order__top">
+                            <div class="how-order__number">1</div>
+                        </div>
+                        <div class="how-order__info">
+                            <h3 class="how-order__subtitle">
+                                Поиск по артикулу
+                            </h3>
+                            <div class="how-order__text">
+                                Введите артикул нужной автозапчасти в поиске. Если вы не знаете номера, то наши специалисты помогут вам с подбором
+                            </div>
                         </div>
                     </div>
-                    <div class="partners-item swiper-slide">
-                        <h3 class="partners-item__title">НАЗВАНИЕ</h3>
-                        <div class="partners-item__text">
-                            Крупнейший поставщик автозапчастей на Северо-Западе
+                    <div class="how-order__item">
+                        <div class="how-order__top">
+                            <div class="how-order__number">2</div>
+                        </div>
+                        <div class="how-order__info">
+                            <h3 class="how-order__subtitle">
+                                Выбор деталей
+                            </h3>
+                            <div class="how-order__text">
+                                Выберите наиболее подходящую деталь по цене, сроку доставки и производителю
+                            </div>
                         </div>
                     </div>
-                    <div class="partners-item swiper-slide">
-                        <h3 class="partners-item__title">НАЗВАНИЕ</h3>
-                        <div class="partners-item__text">
-                            Крупнейший поставщик автозапчастей на Северо-Западе
+                    <div class="how-order__item">
+                        <div class="how-order__top">
+                            <div class="how-order__number">3</div>
+                        </div>
+                        <div class="how-order__info">
+                            <h3 class="how-order__subtitle">
+                                Оформление заказа
+                            </h3>
+                            <div class="how-order__text">
+                                Оформите заказ и закажите бесплатную курьерскую доставку домой или из пункта выдачи
+                            </div>
                         </div>
                     </div>
-                    <div class="partners-item swiper-slide">
-                        <h3 class="partners-item__title">НАЗВАНИЕ</h3>
-                        <div class="partners-item__text">
-                            Крупнейший поставщик автозапчастей на Северо-Западе
+                    <div class="how-order__item">
+                        <div class="how-order__top">
+                            <div class="how-order__number">4</div>
+                        </div>
+                        <div class="how-order__info">
+                            <h3 class="how-order__subtitle">
+                                Подтверждение
+                            </h3>
+                            <div class="how-order__text">
+                                Наш менеджер свяжется с вами<br>
+                                для уточнения деталей и подтверждения заказа
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="map">
-        <div class="map__container">
-            <div class="map__info">
-                <h3 class="map__title">Контакты</h3>
-                <h3 class="map__subtitle">Адрес</h3>
-                <address class="map__text">
-                    198097, Россия, Санкт-Петербург,
-                    ул. Трефолева 4/1
-                </address>
-                <h3 class="map__subtitle">Режим работы</h3>
-                <time class="map__text">
-                    С 9:00 до 21:00
-                </time>
-                <h3 class="map__subtitle">Телефон</h3>
-                <a href="tel:+79119001300" class="map__text">
-                    +7 (911) 900 13-00
-                </a>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <div class="partners__top">
+                    <h2 class="title title_h2">Наши партнеры</h2>
+                    <div class="partners__buttons">
+                        <button class="partners-btn partners-btn_prev">
+                            <svg width="23" height="19" viewBox="0 0 23 19" fill="#D3D3D3" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23 10.7326L4.78136 10.7326L11.3926 17.257L9.62643 19L-8.30516e-07 9.5L9.62643 1.06578e-06L11.3926 1.74296L4.78136 8.26736L23 8.26735L23 10.7326Z"/>
+                            </svg>
+                        </button>
+                        <button class="partners-btn partners-btn_next">
+                            <svg width="23" height="19" viewBox="0 0 23 19" fill="#D3D3D3" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M-1.18459e-06 10.7326L18.2186 10.7326L11.6074 17.257L13.3736 19L23 9.5L13.3736 1.06578e-06L11.6074 1.74296L18.2186 8.26736L-9.69071e-07 8.26735L-1.18459e-06 10.7326Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="partners__inner">
+                    <div class="swiper-wrapper">
+                        <div class="partners-item swiper-slide">
+                            <h3 class="partners-item__title">НАЗВАНИЕ</h3>
+                            <div class="partners-item__text">
+                                Крупнейший поставщик автозапчастей на Северо-Западе
+                            </div>
+                        </div>
+                        <div class="partners-item swiper-slide">
+                            <h3 class="partners-item__title">НАЗВАНИЕ</h3>
+                            <div class="partners-item__text">
+                                Крупнейший поставщик автозапчастей на Северо-Западе
+                            </div>
+                        </div>
+                        <div class="partners-item swiper-slide">
+                            <h3 class="partners-item__title">НАЗВАНИЕ</h3>
+                            <div class="partners-item__text">
+                                Крупнейший поставщик автозапчастей на Северо-Западе
+                            </div>
+                        </div>
+                        <div class="partners-item swiper-slide">
+                            <h3 class="partners-item__title">НАЗВАНИЕ</h3>
+                            <div class="partners-item__text">
+                                Крупнейший поставщик автозапчастей на Северо-Западе
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab092b9d0f80c89a467ad266b2590e8c6a7d7c188db1e8d74fca08d3420fcc764&amp;width=100%25&amp;height=537&amp;lang=ru_RU&amp;scroll=false"></script>
-    </section>
-</main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__inner">
-            <div class="footer-left">
-                <a href="#" class="footer__logo">
-                    <img src="./img/icons/logo.svg" alt="logo">
-                </a>
-                <div class="footer-left__contacts">
-                    <a href="tel:+79119001300" class="footer-left__phone">
+        </section>
+        <section class="map">
+            <div class="map__container">
+                <div class="map__info">
+                    <h3 class="map__title">Контакты</h3>
+                    <h3 class="map__subtitle">Адрес</h3>
+                    <address class="map__text">
+                        198097, Россия, Санкт-Петербург,
+                        ул. Трефолева 4/1
+                    </address>
+                    <h3 class="map__subtitle">Режим работы</h3>
+                    <time class="map__text">
+                        С 9:00 до 21:00
+                    </time>
+                    <h3 class="map__subtitle">Телефон</h3>
+                    <a href="tel:+79119001300" class="map__text">
                         +7 (911) 900 13-00
                     </a>
-                    <a href="mailto:zapscan@bk.ru" class="footer-left__mail">
-                        zapscan@bk.ru
-                    </a>
                 </div>
-                <span class="footer-left__copyright">
-                    &#169; 2021 ZapScan
-                </span>
             </div>
-            <div class="footer-right">
-                <div class="footer-right__top">
-                    <div class="footer-right__list-wr">
-                        <h3 class="footer-right__title">О нас</h3>
-                        <ul class="footer-right__list">
-                            <li>
-                                <a href="#" class="footer-right__link">
-                                    О компании
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer-right__link">
-                                    Контакты
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer-right__link">
-                                    Политика<br>
-                                    конфиденциальности
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer-right__link">
-                                    Договор оферты
-                                </a>
-                            </li>
-                        </ul>
+            <script charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab092b9d0f80c89a467ad266b2590e8c6a7d7c188db1e8d74fca08d3420fcc764&amp;width=100%25&amp;height=537&amp;lang=ru_RU&amp;scroll=false"></script>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer-left">
+                    <a href="#" class="footer__logo">
+                        <img src="./img/icons/logo.svg" alt="logo">
+                    </a>
+                    <div class="footer-left__contacts">
+                        <a href="tel:+79119001300" class="footer-left__phone">
+                            +7 (911) 900 13-00
+                        </a>
+                        <a href="mailto:zapscan@bk.ru" class="footer-left__mail">
+                            zapscan@bk.ru
+                        </a>
                     </div>
-                    <div class="footer-right__list-wr">
-                        <h3 class="footer-right__title">Магазин</h3>
-                        <ul class="footer-right__list">
-                            <li>
-                                <a href="#" class="footer-right__link">
-                                    Оплата
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer-right__link">
-                                    Возврат
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer-right__link">
-                                    Доставка
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer-right__link">
-                                    Контакты
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-right__links">
-                        <ul class="footer-right__list">
-                            <li>
-                                <a href="#" class="footer-right__link">
-                                    <img src="./img/icons/lk.svg" alt="lk">
-                                    Личный кабинет
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer-right__link">
-                                    <img src="./img/icons/box.svg" alt="box">
-                                    Заказы
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <span class="footer-left__copyright">
+                        &#169; 2021 ZapScan
+                    </span>
                 </div>
-                <div class="footer-right__bottom">
-                    <div class="footer-right__payers">
-                        <img src="./img/icons/mastercard.svg" alt="mastercard">
-                        <img src="./img/icons/visa.svg" alt="visa">
-                        <img src="./img/icons/mir.svg" alt="mir">
+                <div class="footer-right">
+                    <div class="footer-right__top">
+                        <div class="footer-right__list-wr">
+                            <h3 class="footer-right__title">О нас</h3>
+                            <ul class="footer-right__list">
+                                <li>
+                                    <a href="#" class="footer-right__link">
+                                        О компании
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-right__link">
+                                        Контакты
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-right__link">
+                                        Политика<br>
+                                        конфиденциальности
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-right__link">
+                                        Договор оферты
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-right__list-wr">
+                            <h3 class="footer-right__title">Магазин</h3>
+                            <ul class="footer-right__list">
+                                <li>
+                                    <a href="#" class="footer-right__link">
+                                        Оплата
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-right__link">
+                                        Возврат
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-right__link">
+                                        Доставка
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-right__link">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-right__links">
+                            <ul class="footer-right__list">
+                                <li>
+                                    <a href="#" class="footer-right__link">
+                                        <img src="./img/icons/lk.svg" alt="lk">
+                                        Личный кабинет
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-right__link">
+                                        <img src="./img/icons/box.svg" alt="box">
+                                        Заказы
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <button class="footer-right__up">
+                    <div class="footer-right__bottom">
+                        <div class="footer-right__payers">
+                            <img src="./img/icons/mastercard.svg" alt="mastercard">
+                            <img src="./img/icons/visa.svg" alt="visa">
+                            <img src="./img/icons/mir.svg" alt="mir">
+                        </div>
+                        <button class="footer-right__up">
                         <span class="footer-right__arrow">
                             <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M-6.16331e-08 6.00016L1.41 7.41016L6 2.83016L10.59 7.41016L12 6.00016L6 0.00015614L-6.16331e-08 6.00016Z" fill="#001E42"/>
                         </svg>
                         </span>
-                        Наверх
-                    </button>
+                            Наверх
+                        </button>
+                    </div>
+                    <span class="footer-left__copyright footer-left__copyright_mob">
+                        &#169; 2021 ZapScan
+                    </span>
                 </div>
             </div>
         </div>
+    </footer>
+</div>
+<div class="overlay">
+    <div class="modal">
+        <h3 class="modal__title">
+            Заказать звонок
+        </h3>
+        <form class="modal-form" action="#">
+            <label for="modal-name">Ваше имя</label>
+            <input id="modal-name" aria-label="" name="name" type="text">
+            <label for="modal-phone">Ваш телефон</label>
+            <input id="modal-phone" aria-label="" name="phone" type="text">
+            <button class="button modal-form__button">Заказать звонок</button>
+        </form>
+        <div class="modal__info">
+            Оставляя данные на нашем сайте, вы соглашаетесь с <a class="modal__politic" href="#">Политикой Конфиденциальности</a>
+        </div>
+        <button class="modal__close">
+            <img src="./img/icons/close.svg" alt="close">
+        </button>
     </div>
-</footer>
+</div>
 </body>
 </html>
