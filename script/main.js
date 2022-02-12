@@ -16,7 +16,17 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./modules/slider.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n\n\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n;(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('overlay', 'header-top__button', 'modal__close')\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./modules/slider.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/burger */ \"./modules/burger.js\");\n\n\n\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n;(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('overlay', 'header-top__button', 'modal__close')\n;(0,_modules_burger__WEBPACK_IMPORTED_MODULE_2__[\"default\"])('header-mob__burger', 'header__close', 'header__wr', 'header__wr_active')\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./modules/burger.js":
+/*!***************************!*\
+  !*** ./modules/burger.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst burger  = (burgerBtn, closeBtn, modal, activeClass) => {\n    const menuOpen = document.querySelector(`.${burgerBtn}`)\n    const menuClose = document.querySelector(`.${closeBtn}`)\n    const menu = document.querySelector(`.${modal}`)\n\n    menuOpen.addEventListener('click', () => {\n        menu.classList.add(`${activeClass}`)\n    })\n    menuClose.addEventListener('click', () => {\n        menu.classList.remove(`${activeClass}`)\n    })\n\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (burger);\n\n//# sourceURL=webpack:///./modules/burger.js?");
 
 /***/ }),
 
