@@ -2144,4 +2144,61 @@ ul {
   z-index: 2;
 }
 
+.header-page-top {
+  padding: 13px 0;
+  background: #F8F8F9;
+}
+.header-page-top__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-page-top__inner a {
+  color: #001E42;
+  font-size: 15px;
+  font-weight: 500;
+}
+.header-page-top__list {
+  display: flex;
+  align-items: center;
+}
+.header-page-top__list li:not(:last-of-type) {
+  margin-right: 40px;
+}
+.header-page-top__link {
+  transition: all 0.3s;
+}
+.header-page-top__link:hover {
+  color: #DB4C3E;
+}
+.header-page-top__contacts {
+  display: flex;
+  align-items: center;
+}
+.header-page-top__phone {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.header-page-top__phone svg {
+  margin-right: 5px;
+}
+.header-page-top__phone:hover {
+  color: #DB4C3E;
+}
+.header-page-top__phone:hover svg path {
+  fill: #DB4C3E;
+}
+.header-page-top__button {
+  text-decoration: underline;
+  transition: all 0.3s;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.header-page-top__button:hover {
+  color: #DB4C3E;
+}
+
 /*# sourceMappingURL=style.css.map */
