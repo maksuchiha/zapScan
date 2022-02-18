@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./modals.js":
-/*!*******************!*\
-  !*** ./modals.js ***!
-  \*******************/
+/***/ "./card.js":
+/*!*****************!*\
+  !*** ./card.js ***!
+  \*****************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/burger */ \"./modules/burger.js\");\n\n\n\n\n// modal('overlay', 'header-top__button', 'modal__close')\n// burger('header-mob__burger', 'header__close', 'header__wr', 'header__wr_active')\n\n\n//# sourceURL=webpack:///./modals.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/burger */ \"./modules/burger.js\");\n\n\n\n\n// modal('overlay', 'header-top__button', 'modal__close')\n// burger('header-mob__burger', 'header__close', 'header__wr', 'header__wr_active')\n\n\n//# sourceURL=webpack:///./card.js?");
 
 /***/ }),
 
@@ -100,7 +100,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./modals.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./card.js");
 /******/ 	
 /******/ })()
 ;
