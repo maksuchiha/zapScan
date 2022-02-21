@@ -16,7 +16,7 @@
   \*****************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/burger */ \"./modules/burger.js\");\n\n\n\n\n// modal('overlay', 'header-top__button', 'modal__close')\n// burger('header-mob__burger', 'header__close', 'header__wr', 'header__wr_active')\n\n\n//# sourceURL=webpack:///./card.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/burger */ \"./modules/burger.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n\n\n\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('overlay', 'header-page-top__button', 'modal__close')\n;(0,_modules_burger__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('header-page__burger', 'header__close', 'header-page-top', 'header-page-top_active')\n\n\n//# sourceURL=webpack:///./card.js?");
 
 /***/ }),
 
