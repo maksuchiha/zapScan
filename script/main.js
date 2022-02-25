@@ -10,23 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./index.js":
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./modules/slider.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/burger */ \"./modules/burger.js\");\n\n\n\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n;(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('overlay', 'header-top__button', 'modal__close')\n;(0,_modules_burger__WEBPACK_IMPORTED_MODULE_2__[\"default\"])('header-mob__burger', 'header__close', 'header__wr', 'header__wr_active')\n\n//# sourceURL=webpack:///./index.js?");
-
-/***/ }),
-
 /***/ "./modules/burger.js":
 /*!***************************!*\
   !*** ./modules/burger.js ***!
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst burger  = (burgerBtn, closeBtn, modal, activeClass) => {\n    const menuOpen = document.querySelector(`.${burgerBtn}`)\n    const menuClose = document.querySelector(`.${closeBtn}`)\n    const menu = document.querySelector(`.${modal}`)\n\n    menuOpen.addEventListener('click', () => {\n        menu.classList.add(`${activeClass}`)\n    })\n    menuClose.addEventListener('click', () => {\n        menu.classList.remove(`${activeClass}`)\n    })\n\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (burger);\n\n//# sourceURL=webpack:///./modules/burger.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"burger\": () => (/* binding */ burger)\n/* harmony export */ });\nconst burger  = (burgerBtn, closeBtn, modal, activeClass) => {\n    const menuOpen = document.querySelector(`.${burgerBtn}`)\n    const menuClose = document.querySelector(`.${closeBtn}`)\n    const menu = document.querySelector(`.${modal}`)\n\n    menuOpen.addEventListener('click', () => {\n        menu.classList.add(`${activeClass}`)\n    })\n    menuClose.addEventListener('click', () => {\n        menu.classList.remove(`${activeClass}`)\n    })\n}\n\n//# sourceURL=webpack:///./modules/burger.js?");
 
 /***/ }),
 
@@ -36,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst modal = (overlay, modalOpen, modalClose) => {\n    const modal = document.querySelector(`.${overlay}`)\n    const openBtn = document.querySelector(`.${modalOpen}`)\n    const closeBtn = document.querySelector(`.${modalClose}`)\n\n    openBtn.addEventListener('click', () => {\n        modal.style.display = 'flex'\n    })\n\n    closeBtn.addEventListener('click', () => {\n        modal.style.display = 'none'\n    })\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);\n\n//# sourceURL=webpack:///./modules/modal.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"modal\": () => (/* binding */ modal)\n/* harmony export */ });\nconst modal = (overlay, modalOpen, modalClose) => {\n    const modal = document.querySelector(`.${overlay}`)\n    const openBtn = document.querySelector(`.${modalOpen}`)\n    const closeBtn = modal.querySelectorAll(`.${modalClose}`)\n\n    openBtn.addEventListener('click', () => {\n        modal.style.display = 'flex'\n    })\n\n    closeBtn.forEach(item => {\n        item.addEventListener('click', () => {\n            modal.style.display = 'none'\n        })\n    })\n}\n\n//# sourceURL=webpack:///./modules/modal.js?");
 
 /***/ }),
 
@@ -46,7 +36,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../node_modules/swiper/swiper.esm.js */ \"../node_modules/swiper/swiper.esm.js\");\n\n\n_node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Swiper.use([_node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Navigation, _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Pagination, _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Scrollbar, _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.EffectCoverflow]);\n\n\nconst slider = () => {\n    const swiper = new _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Swiper('.partners__inner', {\n        loop: true,\n        slidesPerView: 2,\n        allowTouchMove: false,\n        navigation: {\n            nextEl: '.partners-btn_next',\n            prevEl: '.partners-btn_prev',\n        },\n        breakpoints: {\n            1022: {\n                slidesPerView: 4,\n                spaceBetween: 50,\n            },\n            798: {\n                slidesPerView: 3,\n                spaceBetween: 30,\n            },\n            606: {\n                slidesPerView: 2,\n                spaceBetween: 40,\n            },\n            320: {\n                spaceBetween: 15,\n                slidesPerView: 2,\n            }\n        }\n    });\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n\n\n//# sourceURL=webpack:///./modules/slider.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"slider\": () => (/* binding */ slider)\n/* harmony export */ });\n/* harmony import */ var _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../node_modules/swiper/swiper.esm.js */ \"../node_modules/swiper/swiper.esm.js\");\n\n\n_node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Swiper.use([_node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Navigation, _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Pagination, _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Scrollbar, _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.EffectCoverflow]);\n\n\nconst slider = () => {\n    const swiper = new _node_modules_swiper_swiper_esm_js__WEBPACK_IMPORTED_MODULE_0__.Swiper('.partners__inner', {\n        loop: true,\n        slidesPerView: 2,\n        allowTouchMove: false,\n        navigation: {\n            nextEl: '.partners-btn_next',\n            prevEl: '.partners-btn_prev',\n        },\n        breakpoints: {\n            1022: {\n                slidesPerView: 4,\n                spaceBetween: 50,\n            },\n            798: {\n                slidesPerView: 3,\n                spaceBetween: 30,\n            },\n            606: {\n                slidesPerView: 2,\n                spaceBetween: 40,\n            },\n            320: {\n                spaceBetween: 15,\n                slidesPerView: 2,\n            }\n        }\n    });\n}\n\n\n\n//# sourceURL=webpack:///./modules/slider.js?");
+
+/***/ }),
+
+/***/ "./script/index.js":
+/*!*************************!*\
+  !*** ./script/index.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/slider */ \"./modules/slider.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/burger */ \"./modules/burger.js\");\n\n\n\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__.slider)()\n;(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.modal)('overlay', 'header-top__button', 'modal__close')\n;(0,_modules_burger__WEBPACK_IMPORTED_MODULE_2__.burger)('header-mob__burger', 'header__close', 'header__wr', 'header__wr_active')\n\n//# sourceURL=webpack:///./script/index.js?");
 
 /***/ }),
 
@@ -1130,7 +1130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./script/index.js");
 /******/ 	
 /******/ })()
 ;

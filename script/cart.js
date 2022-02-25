@@ -10,16 +10,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./modules/addItems.js":
-/*!*****************************!*\
-  !*** ./modules/addItems.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addItems\": () => (/* binding */ addItems)\n/* harmony export */ });\nconst addItems = (parent, modal, openBtn, closeBtn) => {\n    const btnsBlock = document.querySelector(`.${parent}`)\n    const modalBlock = document.querySelector(`.${modal}`)\n    const btnClose = modalBlock.querySelector(`.${closeBtn}`)\n\n\n    btnsBlock.addEventListener('click', (e) => {\n        if (e.target.closest(`.${openBtn}`)) {\n            modalBlock.style.display = 'flex'\n        }\n    })\n\n    btnClose.addEventListener('click', () => {\n        modalBlock.style.display = 'none'\n    })\n};\n\n//# sourceURL=webpack:///./modules/addItems.js?");
-
-/***/ }),
-
 /***/ "./modules/burger.js":
 /*!***************************!*\
   !*** ./modules/burger.js ***!
@@ -40,13 +30,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./script/card.js":
+/***/ "./script/cart.js":
 /*!************************!*\
-  !*** ./script/card.js ***!
+  !*** ./script/cart.js ***!
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/burger */ \"./modules/burger.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_addItems__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/addItems */ \"./modules/addItems.js\");\n\n\n\n\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.modal)('overlay', 'header-page-top__button', 'modal__close')\n;(0,_modules_burger__WEBPACK_IMPORTED_MODULE_0__.burger)('header-page__burger', 'header__close', 'header-page-top', 'header-page-top_active')\n;(0,_modules_addItems__WEBPACK_IMPORTED_MODULE_2__.addItems)('card', 'add-cart', 'add-cart-btn', 'modal__close')\n\n//# sourceURL=webpack:///./script/card.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/burger */ \"./modules/burger.js\");\n\n\n\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__.modal)('overlay', 'header-page-top__button', 'modal__close')\n;(0,_modules_burger__WEBPACK_IMPORTED_MODULE_1__.burger)('header-page__burger', 'header__close', 'header-page-top', 'header-page-top_active')\n\n//# sourceURL=webpack:///./script/cart.js?");
 
 /***/ })
 
@@ -110,7 +100,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./script/card.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./script/cart.js");
 /******/ 	
 /******/ })()
 ;
