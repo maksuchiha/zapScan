@@ -30,6 +30,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./modules/selectFace.js":
+/*!*******************************!*\
+  !*** ./modules/selectFace.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"selectFace\": () => (/* binding */ selectFace)\n/* harmony export */ });\nconst selectFace = (modalForm, modalSelect, itemForm, attribute) => {\n    const form = document.querySelector(`.${modalForm}`)\n    const formSelect = form.querySelector(`.${modalSelect}`)\n\n    formSelect.addEventListener('click', (e) => {\n        if (e.target.checked) {\n            const gg = e.target.getAttribute('aria-label')\n            form.querySelectorAll(`.${itemForm}`).forEach(item => {\n                item.classList.remove(`${itemForm}_active`)\n                if (gg === item.getAttribute(`${attribute}`)) {\n                    item.classList.add(`${itemForm}_active`)\n                }\n            })\n        }\n    })\n}\n\n//# sourceURL=webpack:///./modules/selectFace.js?");
+
+/***/ }),
+
 /***/ "./modules/slider.js":
 /*!***************************!*\
   !*** ./modules/slider.js ***!
@@ -46,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/slider */ \"./modules/slider.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/burger */ \"./modules/burger.js\");\n\n\n\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__.slider)()\n;(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.modal)('overlay', 'header-top__button', 'modal__close')\n;(0,_modules_burger__WEBPACK_IMPORTED_MODULE_2__.burger)('header-mob__burger', 'header__close', 'header__wr', 'header__wr_active')\n\n//# sourceURL=webpack:///./script/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/slider */ \"./modules/slider.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/burger */ \"./modules/burger.js\");\n/* harmony import */ var _modules_selectFace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modules/selectFace */ \"./modules/selectFace.js\");\n\n\n\n\n\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__.slider)()\n;(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.modal)('overlay', 'header-top__button', 'modal__close')\n;(0,_modules_burger__WEBPACK_IMPORTED_MODULE_2__.burger)('header-mob__burger', 'header__close', 'header__wr', 'header__wr_active')\n;(0,_modules_selectFace__WEBPACK_IMPORTED_MODULE_3__.selectFace)('modal-form-face', 'modal-form-face__select', 'modal-form__face', 'data-face')\n\n//# sourceURL=webpack:///./script/index.js?");
 
 /***/ }),
 

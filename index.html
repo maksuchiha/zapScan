@@ -456,5 +456,113 @@
         </button>
     </div>
 </div>
+<div class="overlay">
+    <div class="modal">
+        <h3 class="modal__title">
+            Войдите или зарегистрируйтесь,<br> чтобы продолжить
+        </h3>
+        <form class="modal-form-face" action="#">
+            <div class="modal-form-face__select">
+                <input checked name="face" id="individual" aria-label="individual" type="radio">
+                <label for="individual">Физическое лицо</label>
+                <input name="face" id="legal" aria-label="legal" type="radio">
+                <label for="legal">Юридическое лицо</label>
+            </div>
+            <div class="modal-form__face modal-form__face_active" data-face="individual">
+                <div class="modal__text">
+                    Мы отправим на номер SMS-сообщение с кодом подтверждения.
+                </div>
+                <div class="modal-form-face__input">
+                    <label for="face-phone">Телефон</label>
+                    <input placeholder="+7 (964) 772 22 33" id="face-phone" name="phone" aria-label="" type="text">
+                </div>
+                <button class="button modal-form__button">Отправить код</button>
+            </div>
+            <div class="modal-form__face" data-face="legal">
+                <div class="modal-form-face__input">
+                    <label for="legal-email">E-mail</label>
+                    <input placeholder="mail@exampe.ru" autocomplete="user-name" id="legal-email" name="email" aria-label="" type="text">
+                </div>
+                <div class="modal-form-face__input">
+                    <div class="modal-form-face__pass-name">
+                        <label for="legal-pass">Пароль</label>
+                        <button>Забыли пароль?</button>
+                    </div>
+                    <input placeholder="Пароль" autocomplete="current-password" id="legal-pass" name="pass" aria-label="" type="password">
+                </div>
+                <button class="button modal-form__button">Отправить код</button>
+            </div>
+        </form>
+        <button class="modal__close">
+            <img src="./img/icons/close.svg" alt="close">
+        </button>
+    </div>
+</div>
+<div class="overlay">
+    <div class="modal">
+        <h3 class="modal__title">
+            Введите код
+        </h3>
+        <form class="modal-form-face" action="#">
+            <div class="modal-form-face__input">
+                <div class="modal-form-face__phone-wr">
+                    <label for="face-phone-dis">Телефон</label>
+                    <button>Изменить телефон</button>
+                </div>
+                <input disabled id="face-phone-dis" name="phone" aria-label="" type="text">
+            </div>
+            <div class="modal-form-face__input">
+                <label for="sms-key-input">Код из смс</label>
+                <input name="sms-key-input" id="sms-key-input" aria-label="" type="text">
+            </div>
+            <div class="modal-form-face__repeat">
+                Отправить код повторно<br>
+                можно через 00:59
+            </div>
+            <button class="modal-form-face__repeat modal-form-face__repeat_btn">
+                Отправить еще раз
+            </button>
+            <a href="#" class="modal__text">
+                Не приходит СМС?
+            </a>
+        </form>
+        <button class="modal__close">
+            <img src="./img/icons/close.svg" alt="close">
+        </button>
+    </div>
+</div>
+<div class="overlay">
+    <div class="modal">
+        <h3 class="modal__title">
+            Восстановление пароля
+        </h3>
+        <div class="modal-form-face__input modal__recovery">
+            <label for="recovery-email">E-mail</label>
+            <input placeholder="mail@exampe.ru" autocomplete="user-name" id="recovery-email" name="email" aria-label="" type="text">
+        </div>
+        <button class="button modal-form__button">Восстановить</button>
+        <button class="modal__close">
+            <img src="./img/icons/close.svg" alt="close">
+        </button>
+    </div>
+</div>
+<div class="overlay">
+    <div class="modal">
+        <h3 class="modal__title">
+            Восстановление пароля
+        </h3>
+        <div class="modal__p">
+            <p>
+                Мы отправили письмо со ссылкой для смены пароля на указанный Вами при регистрации адрес.
+            </p>
+            <p>
+                Если письмо не пришло, проверьте папку «Спам».
+            </p>
+        </div>
+        <button class="modal__close">
+            <img src="./img/icons/close.svg" alt="close">
+        </button>
+    </div>
+</div>
 </body>
 </html>
