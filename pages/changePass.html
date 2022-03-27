@@ -6,6 +6,7 @@
     <title>Zap Scan</title>
     <link rel="stylesheet" href="./../style/style.css">
     <link rel="icon" sizes="32x32" href="./../img/icons/favicon.svg">
+    <script src="./../script/header.js" defer></script>
 </head>
 <body>
 <div class="main-container">
@@ -255,6 +256,26 @@
             </div>
         </div>
     </footer>
+</div>
+<div class="overlay">
+    <div class="modal">
+        <h3 class="modal__title">
+            Заказать звонок
+        </h3>
+        <form class="modal-form" action="#">
+            <label for="modal-name">Ваше имя</label>
+            <input id="modal-name" aria-label="" name="name" type="text">
+            <label for="modal-phone">Ваш телефон</label>
+            <input id="modal-phone" aria-label="" name="phone" type="text">
+            <button class="button modal-form__button">Заказать звонок</button>
+        </form>
+        <div class="modal__info">
+            Оставляя данные на нашем сайте, вы соглашаетесь<br>с <a class="modal__politic" href="#">Политикой Конфиденциальности</a>
+        </div>
+        <button class="modal__close">
+            <img src="./../img/icons/close.svg" alt="close">
+        </button>
+    </div>
 </div>
 </body>
 </html>

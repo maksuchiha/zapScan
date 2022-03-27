@@ -16,7 +16,7 @@
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"burger\": () => (/* binding */ burger)\n/* harmony export */ });\nconst burger  = (burgerBtn, closeBtn, modal, activeClass) => {\n    const menuOpen = document.querySelector(`.${burgerBtn}`)\n    const menuClose = document.querySelector(`.${closeBtn}`)\n    const menu = document.querySelector(`.${modal}`)\n\n    menuOpen.addEventListener('click', () => {\n        menu.classList.add(`${activeClass}`)\n    })\n    menuClose.addEventListener('click', () => {\n        menu.classList.remove(`${activeClass}`)\n    })\n}\n\n//# sourceURL=webpack:///./modules/burger.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"burger\": () => (/* binding */ burger)\n/* harmony export */ });\nconst burger  = (burgerBtn, closeBtn, modal, activeClass) => {\n    const menuOpen = document.querySelector(`.${burgerBtn}`)\n    const menuClose = document.querySelector(`.${closeBtn}`)\n    const menu = document.querySelector(`.${modal}`)\n\n    menuOpen.addEventListener('click', () => {\n        menu.classList.add(`${activeClass}`)\n    })\n    menuClose.addEventListener('click', () => {\n        menu.classList.remove(`${activeClass}`)\n    })\n    menu.addEventListener('click', (e) => {\n        if (e.target.closest('li')) {\n            menu.classList.remove(`${activeClass}`)\n        }\n    })\n}\n\n//# sourceURL=webpack:///./modules/burger.js?");
 
 /***/ }),
 

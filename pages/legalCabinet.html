@@ -6,7 +6,7 @@
     <title>Zap Scan</title>
     <link rel="stylesheet" href="./../style/style.css">
     <link rel="icon" sizes="32x32" href="./../img/icons/favicon.svg">
-    <script src="./../script/order.js" defer></script>
+    <script src="./../script/header.js" defer></script>
 </head>
 <body>
 <div class="main-container">
@@ -122,310 +122,110 @@
         </div>
     </header>
     <main class="main">
-        <section class="order">
+        <section class="cabinet">
             <div class="container">
-                <h1 class="title title_h3 order__title">
-                    Оформление заказа
+                <h1 class="title title_h3 cabinet__title">
+                    Личный кабинет юридического лица
                 </h1>
-                <form class="order__inner">
-                    <div class="order__left">
-                        <div class="order__step">Шаг 1 из 4</div>
-                        <h3 class="title title_h5 order__subtitle">Выберите способы получения</h3>
-                        <div class="reg-legal__checks order__checks">
-                            <div class="reg-legal__check order__check">
-                                <input name="face" id="point" aria-label="point" type="radio">
-                                <label for="point">
-                                    <svg class="reg-legal__check_active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle r="12" transform="matrix(1 0 0 -1 12 12)" fill="#DB4C3E"/>
-                                        <circle r="4" transform="matrix(1 0 0 -1 12 12)" fill="#EEEFF1"/>
-                                    </svg>
-                                    <svg class="reg-legal__check_not-active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle r="12" transform="matrix(1 0 0 -1 12 12)" fill="#EEEFF1"/>
-                                    </svg>
-                                    <span class="order-method">
-                                        <span class="order-method__name">
-                                            Курьером
-                                        </span>
-                                        <span class="order-method__price">
-                                            Бесплатно
-                                        </span>
-                                    </span>
-                                </label>
+                <div class="cabinet__inner">
+                    <div class="cabinet__select">
+                        <div class="cabinet__chose">
+                            <div class="cabinet__personal">
+                                <input checked id="personal-data" name="select-category" aria-label="" type="radio">
+                                <label for="personal-data">Персональные данные</label>
                             </div>
-                            <div class="reg-legal__check order__check">
-                                <input checked name="face" id="courier" aria-label="courier" type="radio">
-                                <label for="courier">
-                                    <svg class="reg-legal__check_active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle r="12" transform="matrix(1 0 0 -1 12 12)" fill="#DB4C3E"/>
-                                        <circle r="4" transform="matrix(1 0 0 -1 12 12)" fill="#EEEFF1"/>
-                                    </svg>
-                                    <svg class="reg-legal__check_not-active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle r="12" transform="matrix(1 0 0 -1 12 12)" fill="#EEEFF1"/>
-                                    </svg>
-                                    <span class="order-method">
-                                        <span class="order-method__name">
-                                            Пункт выдачи
-                                        </span>
-                                        <span class="order-method__price">
-                                            Бесплатно
-                                        </span>
-                                    </span>
-                                </label>
+                            <div class="cabinet__orders">
+                                <a href="#">Мои заказы</a>
                             </div>
                         </div>
-                        <div data-delivery="point" class="order__delivery">
-                            <h3 class="title title_h5 order__subtitle">Адрес доставки</h3>
-                            <div class="modal-form-face__input order__inputs">
-                                <div class="order-address">
-                                    <input name="address" placeholder="Город, улица, номер дома *" aria-label="" type="text">
-                                    <div class="order-address__prompt">
-                                        Укажите номер дома
-                                    </div>
-                                    <ul class="order-address__list">
-                                        <li>г. Санкт-Петербург, ул. Ленина, д. 10</li>
-                                        <li>г. Санкт-Петербург, ул. Ленина, д. 10</li>
-                                        <li>г. Санкт-Петербург, ул. Ленина, д. 10</li>
-                                        <li>г. Санкт-Петербург, ул. Ленина, д. 10</li>
-                                        <li>г. Санкт-Петербург, ул. Ленина, д. 10</li>
-                                        <li>г. Санкт-Петербург, ул. Ленина, д. 10</li>
-                                        <li>г. Санкт-Петербург, ул. Ленина, д. 10</li>
-                                    </ul>
-                                </div>
-                                <div class="order__house">
-                                    <input name="house" placeholder="Кв./офис *" aria-label="" type="text">
-                                    <input name="entrance" placeholder="Подъезд" aria-label="" type="text">
-                                    <input name="floor" placeholder="Этаж" aria-label="" type="text">
-                                    <input name="intercom" placeholder="Домофон" aria-label="" type="text">
-                                </div>
-                                <textarea aria-label="" name="description" placeholder="Комментарий курьеру" cols="30" rows="6"></textarea>
-                            </div>
-                        </div>
-                        <div data-delivery="courier" class="order__delivery order__delivery_active">
-                            <div class="order-complete">
-                                <div class="order-complete__item">
-                                    <div class="order-info__top">
-                                        <h3 class="order-info__title">Ваш заказ</h3>
-                                        <button class="order-info__change">Изменить</button>
-                                    </div>
-                                    <address class="order-complete__text">
-                                        г. Санкт-Петербург, ул. Ленина, д.7., к.5, кв.42
-                                    </address>
-                                </div>
-                                <div class="order-complete__item">
-                                    <div class="order-info__top">
-                                        <h3 class="order-info__title">Ваш заказ</h3>
-                                    </div>
-                                    <div class="order-complete__text">
-                                        Иванов Иван, +7 (900) 123 45-67
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="order__courier">
-                                <h3 class="title title_h5 order__place-title">Забрать самостоятельно из магазина</h3>
-                                <div class="order__places">
-                                    <div class="order-place">
-                                        <h3 class="order-place__title">
-                                            Автозапчасти ZapScan
-                                        </h3>
-                                        <address class="order-place__text">
-                                            Санкт-Петербург,<br>
-                                            ул. Трефолева 4/1
-                                        </address>
-                                    </div>
-                                    <div class="order-place">
-                                        <h3 class="order-place__title">
-                                            Режим работы
-                                        </h3>
-                                        <time class="order-place__text">
-                                            С 9:00 до 21:00
-                                        </time>
-                                    </div>
-                                    <div class="order-place">
-                                        <h3 class="order-place__title">
-                                            Телефон
-                                        </h3>
-                                        <a href="tel:+79219527199" class="order-place__text">
-                                            +7 (921) 952-71-99
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="order__map">
-                                    <script charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A65c111c8e5411ae5b47dc4c93d53600ed177eb9b1b8519685cc4c4c3099de3c8&amp;width=100%25&amp;height=320&amp;lang=ru_RU&amp;scroll=falce"></script>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="order__step">Шаг 2 из 4</div>
-                        <h3 class="title title_h5 order__subtitle">Контактные данные</h3>
-                        <div class="modal-form-face__input order__person">
-                            <input name="name" placeholder="Имя *" aria-label="" type="text">
-                            <input name="last-name" placeholder="Фамилия *" aria-label="" type="text">
-                            <input name="phone" placeholder="Телефон *" aria-label="" type="text">
-                            <input name="email" placeholder="E-mail *" aria-label="" type="text">
-                        </div>
-                        <div class="order__step">Шаг 3 из 4</div>
-                        <h3 class="title title_h5 order__subtitle">Условия доставки</h3>
-                        <div class="order-alert">
-                            <div class="order-alert__img">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="12" r="11.5" fill="#FF0000"/>
-                                    <path d="M11.25 17.135C10.9 17.135 10.61 17.02 10.38 16.79C10.16 16.55 10.05 16.265 10.05 15.935C10.05 15.605 10.16 15.325 10.38 15.095C10.61 14.855 10.9 14.735 11.25 14.735C11.6 14.735 11.885 14.855 12.105 15.095C12.335 15.325 12.45 15.605 12.45 15.935C12.45 16.265 12.335 16.55 12.105 16.79C11.885 17.02 11.6 17.135 11.25 17.135ZM10.35 6.5H12.15V14H10.35V6.5Z" fill="white"/>
-                                </svg>
-                            </div>
-                            <div class="order-alert__text">
-                                Цена или сроки доставки на данные товары могут отличаться. После оформления заказа с вами свяжется менеджер для уточнения деталей.
-                            </div>
-                        </div>
-                        <div class="order__items">
-                            <div class="order-item">
-                                <div class="order-item__img">
-                                    <svg width="107" height="107" viewBox="0 0 107 107" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="107" height="107" fill="#ECECEC"/>
-                                    </svg>
-                                </div>
-                                <div class="order-item__info">
-                                    <span class="order-item__name">
-                                        Ford 1 744 977
-                                    </span>
-                                    <span class="order-item__desc">
-                                        ФОРД ФАРА ЛЕВАЯ ФОКУС
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="order-item">
-                                <div class="order-item__img">
-                                    <svg width="107" height="107" viewBox="0 0 107 107" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="107" height="107" fill="#ECECEC"/>
-                                    </svg>
-                                </div>
-                                <div class="order-item__info">
-                                    <span class="order-item__name">
-                                        Lada 21120310101502
-                                    </span>
-                                    <span class="order-item__desc">
-                                        ДИСК КОЛЕСНЫЙ ВАЗ 2112 14 ЧЁРНЫЕ LADA
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="order__step">Шаг 4 из 4</div>
-                        <h3 class="title title_h5 order__subtitle">Способ оплаты</h3>
-                        <div class="order-payed">
-                            <input checked id="order-card" name="payed" aria-label="card" type="radio">
-                            <label for="order-card">
-                                <span>
-                                    Картой онлайн
-                                </span>
-                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M23.3876 9.01233C23.2714 8.89517 23.1331 8.80217 22.9808 8.73871C22.8285 8.67525 22.6651 8.64258 22.5001 8.64258C22.335 8.64258 22.1717 8.67525 22.0193 8.73871C21.867 8.80217 21.7288 8.89517 21.6126 9.01233L12.3001 18.3373L8.38756 14.4123C8.26691 14.2958 8.12448 14.2041 7.96841 14.1426C7.81234 14.0811 7.64569 14.051 7.47796 14.0539C7.31024 14.0568 7.14472 14.0927 6.99088 14.1595C6.83703 14.2264 6.69786 14.3229 6.58131 14.4436C6.46476 14.5642 6.37312 14.7067 6.31161 14.8627C6.25011 15.0188 6.21995 15.1854 6.22285 15.3532C6.22575 15.5209 6.26166 15.6864 6.32853 15.8403C6.39539 15.9941 6.49191 16.1333 6.61256 16.2498L11.4126 21.0498C11.5288 21.167 11.667 21.26 11.8193 21.3234C11.9717 21.3869 12.135 21.4196 12.3001 21.4196C12.4651 21.4196 12.6285 21.3869 12.7808 21.3234C12.9331 21.26 13.0714 21.167 13.1876 21.0498L23.3876 10.8498C23.5144 10.7328 23.6157 10.5907 23.685 10.4326C23.7542 10.2745 23.79 10.1037 23.79 9.93108C23.79 9.75845 23.7542 9.58769 23.685 9.42957C23.6157 9.27144 23.5144 9.12938 23.3876 9.01233Z" fill="#001E42"/>
-                                </svg>
-                            </label>
-                            <input id="order-cash" name="payed" aria-label="cash" type="radio">
-                            <label for="order-cash">
-                                <span>
-                                    При получении картой или наличными
-                                </span>
-                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M23.3876 9.01233C23.2714 8.89517 23.1331 8.80217 22.9808 8.73871C22.8285 8.67525 22.6651 8.64258 22.5001 8.64258C22.335 8.64258 22.1717 8.67525 22.0193 8.73871C21.867 8.80217 21.7288 8.89517 21.6126 9.01233L12.3001 18.3373L8.38756 14.4123C8.26691 14.2958 8.12448 14.2041 7.96841 14.1426C7.81234 14.0811 7.64569 14.051 7.47796 14.0539C7.31024 14.0568 7.14472 14.0927 6.99088 14.1595C6.83703 14.2264 6.69786 14.3229 6.58131 14.4436C6.46476 14.5642 6.37312 14.7067 6.31161 14.8627C6.25011 15.0188 6.21995 15.1854 6.22285 15.3532C6.22575 15.5209 6.26166 15.6864 6.32853 15.8403C6.39539 15.9941 6.49191 16.1333 6.61256 16.2498L11.4126 21.0498C11.5288 21.167 11.667 21.26 11.8193 21.3234C11.9717 21.3869 12.135 21.4196 12.3001 21.4196C12.4651 21.4196 12.6285 21.3869 12.7808 21.3234C12.9331 21.26 13.0714 21.167 13.1876 21.0498L23.3876 10.8498C23.5144 10.7328 23.6157 10.5907 23.685 10.4326C23.7542 10.2745 23.79 10.1037 23.79 9.93108C23.79 9.75845 23.7542 9.58769 23.685 9.42957C23.6157 9.27144 23.5144 9.12938 23.3876 9.01233Z" fill="#001E42"/>
-                                </svg>
-                            </label>
-                        </div>
-                        <div class="validate-error">
-                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="11.5" cy="11.5" r="11.5" fill="#FF0000"/>
-                                <path d="M11.25 17.135C10.9 17.135 10.61 17.02 10.38 16.79C10.16 16.55 10.05 16.265 10.05 15.935C10.05 15.605 10.16 15.325 10.38 15.095C10.61 14.855 10.9 14.735 11.25 14.735C11.6 14.735 11.885 14.855 12.105 15.095C12.335 15.325 12.45 15.605 12.45 15.935C12.45 16.265 12.335 16.55 12.105 16.79C11.885 17.02 11.6 17.135 11.25 17.135ZM10.35 6.5H12.15V14H10.35V6.5Z" fill="white"/>
+                        <button class="cabinet__exit">
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 12.5C4 12.7652 4.10536 13.0196 4.29289 13.2071C4.48043 13.3946 4.73478 13.5 5 13.5H12.59L10.29 15.79C10.1963 15.883 10.1219 15.9936 10.0711 16.1154C10.0203 16.2373 9.9942 16.368 9.9942 16.5C9.9942 16.632 10.0203 16.7627 10.0711 16.8846C10.1219 17.0064 10.1963 17.117 10.29 17.21C10.383 17.3037 10.4936 17.3781 10.6154 17.4289C10.7373 17.4797 10.868 17.5058 11 17.5058C11.132 17.5058 11.2627 17.4797 11.3846 17.4289C11.5064 17.3781 11.617 17.3037 11.71 17.21L15.71 13.21C15.801 13.1149 15.8724 13.0028 15.92 12.88C16.02 12.6365 16.02 12.3635 15.92 12.12C15.8724 11.9972 15.801 11.8851 15.71 11.79L11.71 7.79C11.6168 7.69676 11.5061 7.6228 11.3842 7.57234C11.2624 7.52188 11.1319 7.49591 11 7.49591C10.8681 7.49591 10.7376 7.52188 10.6158 7.57234C10.4939 7.6228 10.3832 7.69676 10.29 7.79C10.1968 7.88324 10.1228 7.99393 10.0723 8.11575C10.0219 8.23757 9.99591 8.36814 9.99591 8.5C9.99591 8.63186 10.0219 8.76243 10.0723 8.88425C10.1228 9.00607 10.1968 9.11676 10.29 9.21L12.59 11.5H5C4.73478 11.5 4.48043 11.6054 4.29289 11.7929C4.10536 11.9804 4 12.2348 4 12.5ZM17 2.5H7C6.20435 2.5 5.44129 2.81607 4.87868 3.37868C4.31607 3.94129 4 4.70435 4 5.5V8.5C4 8.76522 4.10536 9.01957 4.29289 9.20711C4.48043 9.39464 4.73478 9.5 5 9.5C5.26522 9.5 5.51957 9.39464 5.70711 9.20711C5.89464 9.01957 6 8.76522 6 8.5V5.5C6 5.23478 6.10536 4.98043 6.29289 4.79289C6.48043 4.60536 6.73478 4.5 7 4.5H17C17.2652 4.5 17.5196 4.60536 17.7071 4.79289C17.8946 4.98043 18 5.23478 18 5.5V19.5C18 19.7652 17.8946 20.0196 17.7071 20.2071C17.5196 20.3946 17.2652 20.5 17 20.5H7C6.73478 20.5 6.48043 20.3946 6.29289 20.2071C6.10536 20.0196 6 19.7652 6 19.5V16.5C6 16.2348 5.89464 15.9804 5.70711 15.7929C5.51957 15.6054 5.26522 15.5 5 15.5C4.73478 15.5 4.48043 15.6054 4.29289 15.7929C4.10536 15.9804 4 16.2348 4 16.5V19.5C4 20.2956 4.31607 21.0587 4.87868 21.6213C5.44129 22.1839 6.20435 22.5 7 22.5H17C17.7956 22.5 18.5587 22.1839 19.1213 21.6213C19.6839 21.0587 20 20.2956 20 19.5V5.5C20 4.70435 19.6839 3.94129 19.1213 3.37868C18.5587 2.81607 17.7956 2.5 17 2.5Z" fill="#436288"/>
                             </svg>
-                            Вы не заполнили данные получателя
-                        </div>
-                        <div class="order__button__wr">
-                            <button class="button modal-form__button order__button">Оформить заказ</button>
-                            <div class="modal__info">
-                                Нажимая на кнопку, вы соглашаетесь с <a class="modal__politic" href="#">Условиями обработки перс. данных</a>,<br>а также с <a class="modal__politic" href="#">Условиями продажи</a>
+                            Выйти
+                        </button>
+                    </div>
+                    <div class="cabinet__wr">
+                        <h3 class="reg-legal__subtitle">
+                            Контактная информация
+                        </h3>
+                        <form class="modal-form-face__input reg-legal__item">
+                            <input placeholder="Название организации или ИП" id="recovery-email" name="name" aria-label="" type="text">
+                            <div class="reg-legal__checks">
+                                <div class="reg-legal__check">
+                                    <input name="face" id="organization" aria-label="" type="radio">
+                                    <label for="organization">
+                                        <svg class="reg-legal__check_active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle r="12" transform="matrix(1 0 0 -1 12 12)" fill="#DB4C3E"/>
+                                            <circle r="4" transform="matrix(1 0 0 -1 12 12)" fill="#EEEFF1"/>
+                                        </svg>
+                                        <svg class="reg-legal__check_not-active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle r="12" transform="matrix(1 0 0 -1 12 12)" fill="#EEEFF1"/>
+                                        </svg>
+                                        Организация
+                                    </label>
+                                </div>
+                                <div class="reg-legal__check">
+                                    <input checked name="face" id="individual" aria-label="" type="radio">
+                                    <label for="individual">
+                                        <svg class="reg-legal__check_active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle r="12" transform="matrix(1 0 0 -1 12 12)" fill="#DB4C3E"/>
+                                            <circle r="4" transform="matrix(1 0 0 -1 12 12)" fill="#EEEFF1"/>
+                                        </svg>
+                                        <svg class="reg-legal__check_not-active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle r="12" transform="matrix(1 0 0 -1 12 12)" fill="#EEEFF1"/>
+                                        </svg>
+                                        ИП
+                                    </label>
+                                </div>
                             </div>
+                            <input placeholder="Контактное лицо" id="contact-face" name="contact-face" aria-label="" type="text">
+                            <input placeholder="E-mail" id="email" name="e-mail" aria-label="" type="text">
+                            <input placeholder="Номер телефона" id="phone" name="phone" aria-label="" type="text">
+                            <input placeholder="Юридический адрес" id="address" name="address" aria-label="" type="text">
+                            <div class="cabinet__buttons">
+                                <button class="button cabinet__button">Сохранить изменения</button>
+                                <button class="cabinet__cancel">Отменить</button>
+                            </div>
+                        </form>
+                        <form class="modal-form-face__input reg-legal__item">
+                            <h3 class="reg-legal__subtitle">
+                                Реквизиты
+                            </h3>
+                            <input placeholder="БИК" id="bik" name="bik" aria-label="" type="text">
+                            <input placeholder="Р/с" id="rs" name="rs" aria-label="" type="text">
+                            <input placeholder="Кор.счет" id="count" name="count" aria-label="" type="text">
+                            <input placeholder="ИНН" id="inn" name="inn" aria-label="" type="text">
+                            <input placeholder="КПП" id="kpp" name="kpp" aria-label="" type="text">
+                            <div class="cabinet__buttons">
+                                <button class="button cabinet__button">Сохранить изменения</button>
+                                <button class="cabinet__cancel">Отменить</button>
+                            </div>
+                        </form>
+                        <form class="modal-form-face__input reg-legal__item">
+                            <h3 class="reg-legal__subtitle">
+                                Изменение пароля
+                            </h3>
+                            <label for="pass">Текущий пароль</label>
+                            <input autocomplete="password" id="pass" aria-label="" type="password">
+                            <label for="pass-new">Новый пароль</label>
+                            <input autocomplete="password" id="pass-new" aria-label="" type="password">
+                            <label for="pass-conf">Подтверждение пароля</label>
+                            <input autocomplete="password" id="pass-conf" aria-label="" type="password">
+                            <div class="cabinet__buttons">
+                                <button class="button cabinet__button cabinet__buttons_margin">Изменить пароль</button>
+                            </div>
+                        </form>
+                        <div class="cabinet__buttons cabinet__buttons_margin">
+                            <button class="cabinet__exit cabinet__exit_margin cabinet__exit_mob">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 12.5C4 12.7652 4.10536 13.0196 4.29289 13.2071C4.48043 13.3946 4.73478 13.5 5 13.5H12.59L10.29 15.79C10.1963 15.883 10.1219 15.9936 10.0711 16.1154C10.0203 16.2373 9.9942 16.368 9.9942 16.5C9.9942 16.632 10.0203 16.7627 10.0711 16.8846C10.1219 17.0064 10.1963 17.117 10.29 17.21C10.383 17.3037 10.4936 17.3781 10.6154 17.4289C10.7373 17.4797 10.868 17.5058 11 17.5058C11.132 17.5058 11.2627 17.4797 11.3846 17.4289C11.5064 17.3781 11.617 17.3037 11.71 17.21L15.71 13.21C15.801 13.1149 15.8724 13.0028 15.92 12.88C16.02 12.6365 16.02 12.3635 15.92 12.12C15.8724 11.9972 15.801 11.8851 15.71 11.79L11.71 7.79C11.6168 7.69676 11.5061 7.6228 11.3842 7.57234C11.2624 7.52188 11.1319 7.49591 11 7.49591C10.8681 7.49591 10.7376 7.52188 10.6158 7.57234C10.4939 7.6228 10.3832 7.69676 10.29 7.79C10.1968 7.88324 10.1228 7.99393 10.0723 8.11575C10.0219 8.23757 9.99591 8.36814 9.99591 8.5C9.99591 8.63186 10.0219 8.76243 10.0723 8.88425C10.1228 9.00607 10.1968 9.11676 10.29 9.21L12.59 11.5H5C4.73478 11.5 4.48043 11.6054 4.29289 11.7929C4.10536 11.9804 4 12.2348 4 12.5ZM17 2.5H7C6.20435 2.5 5.44129 2.81607 4.87868 3.37868C4.31607 3.94129 4 4.70435 4 5.5V8.5C4 8.76522 4.10536 9.01957 4.29289 9.20711C4.48043 9.39464 4.73478 9.5 5 9.5C5.26522 9.5 5.51957 9.39464 5.70711 9.20711C5.89464 9.01957 6 8.76522 6 8.5V5.5C6 5.23478 6.10536 4.98043 6.29289 4.79289C6.48043 4.60536 6.73478 4.5 7 4.5H17C17.2652 4.5 17.5196 4.60536 17.7071 4.79289C17.8946 4.98043 18 5.23478 18 5.5V19.5C18 19.7652 17.8946 20.0196 17.7071 20.2071C17.5196 20.3946 17.2652 20.5 17 20.5H7C6.73478 20.5 6.48043 20.3946 6.29289 20.2071C6.10536 20.0196 6 19.7652 6 19.5V16.5C6 16.2348 5.89464 15.9804 5.70711 15.7929C5.51957 15.6054 5.26522 15.5 5 15.5C4.73478 15.5 4.48043 15.6054 4.29289 15.7929C4.10536 15.9804 4 16.2348 4 16.5V19.5C4 20.2956 4.31607 21.0587 4.87868 21.6213C5.44129 22.1839 6.20435 22.5 7 22.5H17C17.7956 22.5 18.5587 22.1839 19.1213 21.6213C19.6839 21.0587 20 20.2956 20 19.5V5.5C20 4.70435 19.6839 3.94129 19.1213 3.37868C18.5587 2.81607 17.7956 2.5 17 2.5Z" fill="#436288"/>
+                                </svg>
+                                Выйти
+                            </button>
                         </div>
                     </div>
-                    <div class="order__right">
-                        <div class="order-info">
-                            <div class="order-info__top">
-                                <h3 class="order-info__title">Ваш заказ</h3>
-                                <button class="order-info__change">Изменить</button>
-                            </div>
-                            <div class="order-info__count">
-                                Количество товаров — 2
-                            </div>
-                            <div class="order-info-description">
-                                <div class="order-info-description__item">
-                                    <div class="order-info-description__price">
-                                        12 456 ₽
-                                    </div>
-                                    <div class="order-info-description__desc">
-                                        <span>Lada 21120310101502</span>
-                                        ДИСК КОЛЕСНЫЙ ВАЗ 2112 14 ЧЁРНЫЕ LADA
-                                    </div>
-                                    <div class="order-info-description__count">
-                                        Кол-во:<span>1</span>
-                                    </div>
-                                </div>
-                                <div class="order-info-description__item">
-                                    <div class="order-info-description__price">
-                                        11 567 ₽
-                                    </div>
-                                    <div class="order-info-description__desc">
-                                        <span>Ford 1 744 977</span>
-                                        ФОРД ФАРА ЛЕВАЯ ФОКУС
-                                    </div>
-                                    <div class="order-info-description__count">
-                                        Кол-во:<span>1</span>
-                                    </div>
-                                </div>
-                                <div class="order-info-description__item">
-                                    <div class="order-info-description__price">
-                                        11 567 ₽
-                                    </div>
-                                    <div class="order-info-description__desc">
-                                        <span>Ford 1 744 977</span>
-                                        ФОРД ФАРА ЛЕВАЯ ФОКУС
-                                    </div>
-                                    <div class="order-info-description__count">
-                                        Кол-во:<span>1</span>
-                                    </div>
-                                </div>
-                                <div class="order-info-description__item">
-                                    <div class="order-info-description__price">
-                                        11 567 ₽
-                                    </div>
-                                    <div class="order-info-description__desc">
-                                        <span>Ford 1 744 977</span>
-                                        ФОРД ФАРА ЛЕВАЯ ФОКУС
-                                    </div>
-                                    <div class="order-info-description__count">
-                                        Кол-во:<span>1</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="order-info__price">
-                                <div class="order-info__desc">
-                                    <span>Итого</span>
-                                    <span>26 789 ₽</span>
-                                </div>
-                                <div class="order-info__desc">
-                                    <span>Доставка</span>
-                                    <span>Бесплатно</span>
-                                </div>
-                                <div class="order-info__total">
-                                    <span>Всего к оплате</span>
-                                    <span class="order-info__sum">26 789 ₽</span>
-                                </div>
-                            </div>
-                            <div class="order__button__wr order__button__wr_mob">
-                                <button class="button modal-form__button order__button">Оформить заказ</button>
-                                <div class="modal__info order__info">
-                                    Нажимая на кнопку, вы соглашаетесь с <a class="modal__politic" href="#">Условиями обработки перс. данных</a>,<br>а также с <a class="modal__politic" href="#">Условиями продажи</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </section>
     </main>
@@ -544,6 +344,26 @@
             </div>
         </div>
     </footer>
+</div>
+<div class="overlay">
+    <div class="modal">
+        <h3 class="modal__title">
+            Заказать звонок
+        </h3>
+        <form class="modal-form" action="#">
+            <label for="modal-name">Ваше имя</label>
+            <input id="modal-name" aria-label="" name="name" type="text">
+            <label for="modal-phone">Ваш телефон</label>
+            <input id="modal-phone" aria-label="" name="phone" type="text">
+            <button class="button modal-form__button">Заказать звонок</button>
+        </form>
+        <div class="modal__info">
+            Оставляя данные на нашем сайте, вы соглашаетесь<br>с <a class="modal__politic" href="#">Политикой Конфиденциальности</a>
+        </div>
+        <button class="modal__close">
+            <img src="./../img/icons/close.svg" alt="close">
+        </button>
+    </div>
 </div>
 </body>
 </html>

@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./modules/addItems.js":
-/*!*****************************!*\
-  !*** ./modules/addItems.js ***!
-  \*****************************/
+/***/ "./modules/about.js":
+/*!**************************!*\
+  !*** ./modules/about.js ***!
+  \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addItems\": () => (/* binding */ addItems)\n/* harmony export */ });\nconst addItems = (parent, modal, openBtn, closeBtn) => {\n    const btnsBlock = document.querySelector(`.${parent}`)\n    const modalBlock = document.querySelector(`.${modal}`)\n    const btnClose = modalBlock.querySelector(`.${closeBtn}`)\n\n\n    btnsBlock.addEventListener('click', (e) => {\n        if (e.target.closest(`.${openBtn}`)) {\n            modalBlock.style.display = 'flex'\n        }\n    })\n\n    btnClose.addEventListener('click', () => {\n        modalBlock.style.display = 'none'\n    })\n};\n\n//# sourceURL=webpack:///./modules/addItems.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"about\": () => (/* binding */ about)\n/* harmony export */ });\nconst about = () => {\n    const aboutBlock = document.querySelectorAll('.about-block')\n    const listItem = document.querySelectorAll('.about-li')\n\n    document.body.addEventListener('click', (e) => {\n        if (e.target.closest('.about-li') && e.target.getAttribute('data-category')) {\n            aboutBlock.forEach(item => {\n                item.classList.remove('about-block_active')\n                if (item.getAttribute('data-block') ===\n                    e.target.getAttribute('data-category')) {\n                    item.classList.add('about-block_active')\n                }\n            })\n            listItem.forEach(item => {\n                item.classList.remove('about-li_active')\n                if (item.getAttribute('data-category') ===\n                    e.target.getAttribute('data-category')) {\n                    item.classList.add('about-li_active')\n                }\n            })\n        }\n    })\n}\n\n//# sourceURL=webpack:///./modules/about.js?");
 
 /***/ }),
 
@@ -30,23 +30,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./modules/modal.js":
-/*!**************************!*\
-  !*** ./modules/modal.js ***!
-  \**************************/
+/***/ "./script/about.js":
+/*!*************************!*\
+  !*** ./script/about.js ***!
+  \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"modal\": () => (/* binding */ modal)\n/* harmony export */ });\nconst modal = (overlay, modalOpen, modalClose) => {\n    const modal = document.querySelector(`.${overlay}`)\n    const openBtn = document.querySelector(`.${modalOpen}`)\n    const closeBtn = modal.querySelectorAll(`.${modalClose}`)\n\n    openBtn.addEventListener('click', () => {\n        modal.style.display = 'flex'\n    })\n\n    closeBtn.forEach(item => {\n        item.addEventListener('click', () => {\n            modal.style.display = 'none'\n        })\n    })\n}\n\n//# sourceURL=webpack:///./modules/modal.js?");
-
-/***/ }),
-
-/***/ "./script/card.js":
-/*!************************!*\
-  !*** ./script/card.js ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/burger */ \"./modules/burger.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_addItems__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/addItems */ \"./modules/addItems.js\");\n\n\n\n\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.modal)('overlay', 'header-page-top__button', 'modal__close')\n;(0,_modules_burger__WEBPACK_IMPORTED_MODULE_0__.burger)('header-page__burger', 'header__close', 'header-page-top', 'header-page-top_active')\n;(0,_modules_addItems__WEBPACK_IMPORTED_MODULE_2__.addItems)('card', 'add-cart', 'add-cart-btn', 'modal__close')\n\n//# sourceURL=webpack:///./script/card.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/burger */ \"./modules/burger.js\");\n/* harmony import */ var _modules_about__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/about */ \"./modules/about.js\");\n\n\n\n(0,_modules_burger__WEBPACK_IMPORTED_MODULE_0__.burger)('header-mob__burger', 'about-header__close', 'about-header__menu', 'about-header__menu_active')\n;(0,_modules_about__WEBPACK_IMPORTED_MODULE_1__.about)()\n\n//# sourceURL=webpack:///./script/about.js?");
 
 /***/ })
 
@@ -110,7 +100,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./script/card.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./script/about.js");
 /******/ 	
 /******/ })()
 ;
